@@ -1,0 +1,45 @@
+name: CI
+on:
+  pull_request:
+    branches:
+      - master
+      - gitaction
+
+jobs:
+  flutter_test:
+    name: Run flutter test and analyze
+    runs-on: [ubuntu-latest, windows-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v1
+        with:
+          java-version: '12.x'
+      - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: '2.x'
+          channel: 'any'
+      - name: Dart version
+        run:  dart --version
+      - name: Flutter version
+        run: flutter --version
+      - name: Install app dependencies
+        run: flutter pub get
+      - name: flutter analyzer
+        run: flutter analyze
+
+  build_appbundle:
+    name: Build Flutter (Android)
+    needs: [flutter_test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v1
+        with:
+          java-version: '12.x'
+      - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: '2.x'
+          channel: 'any'
+      - run: flutter pub get
+      - run: flutter clean
+      - run: flutter build appbundle
