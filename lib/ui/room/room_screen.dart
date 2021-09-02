@@ -180,7 +180,7 @@ class _RoomScreenState extends State<RoomScreen>
                                     widget.chat?.chatName ??
                                     widget.chat?.interlocutorId ??
                                     'Name',
-                            style: Theme.of(context).textTheme.body2,
+                            style: Theme.of(context).textTheme.bodyText1,
                           ),
                         ),
                         Visibility(

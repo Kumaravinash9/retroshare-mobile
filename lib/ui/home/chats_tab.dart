@@ -83,7 +83,8 @@ class ChatsTab extends StatelessWidget {
                                   padding: EdgeInsets.symmetric(vertical: 25),
                                   child: Text(
                                     "Looks like there aren't any subscribed chats",
-                                    style: Theme.of(context).textTheme.body2,
+                                    style: Theme.of(context)
+                                    .textTheme.bodyText1,
                                     textAlign: TextAlign.center,
                                   ),
                                 ),

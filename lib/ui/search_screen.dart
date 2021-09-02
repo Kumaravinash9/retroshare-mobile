@@ -133,7 +133,8 @@ class _SearchScreenState extends State<SearchScreen>
                             children: <Widget>[
                               Icon(Icons.search,
                                   color:
-                                      Theme.of(context).textTheme.body1.color),
+                                      Theme.of(context).textTheme.
+                                      bodyText1.color),
                               const SizedBox(
                                 width: 8,
                               ),
@@ -144,7 +145,7 @@ class _SearchScreenState extends State<SearchScreen>
                                   decoration: const InputDecoration(
                                       border: InputBorder.none,
                                       hintText: 'Type text...'),
-                                  style: Theme.of(context).textTheme.body2,
+                                  style: Theme.of(context).textTheme.bodyText2,
                                 ),
                               ),
                             ],
@@ -184,7 +185,7 @@ class _SearchScreenState extends State<SearchScreen>
                               child: Center(
                                 child: Text(
                                   'Chats',
-                                  style: Theme.of(context).textTheme.body2,
+                                  style: Theme.of(context).textTheme.bodyText2,
                                 ),
                               ),
                             ),
@@ -210,11 +211,11 @@ class _SearchScreenState extends State<SearchScreen>
                                   BorderRadius.circular(appBarHeight / 2),
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(8),
+                              padding: const EdgeInsets.all(8),
                               child: Center(
                                 child: Text(
                                   'People',
-                                  style: Theme.of(context).textTheme.body2,
+                                  style: Theme.of(context).textTheme.bodyText2,
                                 ),
                               ),
                             ),
@@ -252,7 +253,8 @@ class _SearchScreenState extends State<SearchScreen>
                                     padding: EdgeInsets.symmetric(vertical: 25),
                                     child: Text(
                                       'Nothing was found',
-                                      style: Theme.of(context).textTheme.body2,
+                                      style: Theme.of(context).textTheme
+                                      .bodyText1,
                                     ),
                                   ),
                                 ],
@@ -285,7 +287,8 @@ class _SearchScreenState extends State<SearchScreen>
                                     padding: EdgeInsets.symmetric(vertical: 25),
                                     child: Text(
                                       'Nothing was found',
-                                      style: Theme.of(context).textTheme.body2,
+                                      style: Theme.of(context).
+                                      textTheme.bodyText1,
                                     ),
                                   ),
                                 ],
@@ -307,7 +310,7 @@ class _SearchScreenState extends State<SearchScreen>
 
   Widget _buildChatsList() {
     if (_searchContent?.isNotEmpty ?? false) {
-      List<Chat> tempChatsList = new List();
+      List<Chat> tempChatsList = [];
       for (int i = 0; i < subscribedChats.length; i++) {
         if (subscribedChats[i]
             .chatName
@@ -318,7 +321,7 @@ class _SearchScreenState extends State<SearchScreen>
       }
       filteredSubscribedChats = tempChatsList;
 
-      List<VisibleChatLobbyRecord> tempList = new List();
+      List<VisibleChatLobbyRecord> tempList = [];
       for (int i = 0; i < publicChats.length; i++) {
         if (publicChats[i]
             .lobbyName
@@ -396,7 +399,7 @@ class _SearchScreenState extends State<SearchScreen>
 
   Widget _buildPeopleList() {
     if (_searchContent.isNotEmpty) {
-      List<Identity> tempContactsList = new List();
+      List<Identity> tempContactsList = [];
       for (int i = 0; i < contactsIds.length; i++) {
         if (contactsIds[i]
             .name
@@ -407,7 +410,7 @@ class _SearchScreenState extends State<SearchScreen>
       }
       filteredContactsIds = tempContactsList;
 
-      List<Identity> tempList = new List();
+      List<Identity> tempList = [];
       for (int i = 0; i < allIds.length; i++) {
         if (allIds[i]
             .name

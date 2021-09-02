@@ -188,7 +188,7 @@ class _FriendsTabState extends State<FriendsTab> {
                         padding: const EdgeInsets.symmetric(vertical: 5),
                         child: Text(
                           'Looks like an empty space',
-                          style: Theme.of(context).textTheme.body2,
+                          style: Theme.of(context).textTheme.bodyText1,
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -196,7 +196,7 @@ class _FriendsTabState extends State<FriendsTab> {
                         padding: const EdgeInsets.symmetric(vertical: 5),
                         child: Text(
                           'You can add friends in the menu',
-                          style: Theme.of(context).textTheme.body1,
+                          style: Theme.of(context).textTheme.bodyText2,
                           textAlign: TextAlign.center,
                         ),
                       ),

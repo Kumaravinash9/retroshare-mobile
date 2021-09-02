@@ -51,7 +51,7 @@ class _DiscoverChatsScreenState extends State<DiscoverChatsScreen> {
                   Expanded(
                     child: Text(
                       'Discover public chats',
-                      style: Theme.of(context).textTheme.body2,
+                      style: Theme.of(context).textTheme.bodyText1,
                     ),
                   ),
                 ],

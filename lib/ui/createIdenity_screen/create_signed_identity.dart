@@ -124,7 +124,7 @@ class _SignedIdenityTabState extends State<SignedIdenityTab> {
                               size: 22.0,
                             ),
                             hintText: 'Name'),
-                        style: Theme.of(context).textTheme.body2,
+                        style: Theme.of(context).textTheme.bodyText1,
                       ),
                     ),
                   ),

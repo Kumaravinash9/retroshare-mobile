@@ -46,4 +46,4 @@ analyzer:
     unused_local_variable: error
     prefer_const_literals_to_create_immutables: ignore
     avoid_redundant_argument_values: error
-    
+    deprecated_member_use: info

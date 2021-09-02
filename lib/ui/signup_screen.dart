@@ -124,7 +124,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             size: 22.0,
                           ),
                           hintText: 'Username'),
-                      style: Theme.of(context).textTheme.body2,
+                      style: Theme.of(context).textTheme.bodyText1,
                     ),
                   ),
                 ),
@@ -175,7 +175,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             size: 22.0,
                           ),
                           hintText: 'Password'),
-                      style: Theme.of(context).textTheme.body2,
+                      style: Theme.of(context).textTheme.bodyText1,
                       obscureText: true,
                     ),
                   ),
@@ -227,7 +227,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             size: 22.0,
                           ),
                           hintText: 'Repeat password'),
-                      style: Theme.of(context).textTheme.body2,
+                      style: Theme.of(context).textTheme.bodyText1,
                       obscureText: true,
                     ),
                   ),
@@ -288,7 +288,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           const SizedBox(width: 3),
                           Text(
                             'Advanced option',
-                            style: Theme.of(context).textTheme.body1,
+                            style: Theme.of(context).textTheme.bodyText1,
                           )
                         ],
                       ),
@@ -321,7 +321,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           ),
                           hintText: 'Node name',
                         ),
-                        style: Theme.of(context).textTheme.body2,
+                        style: Theme.of(context).textTheme.bodyText1,
                       ),
                     ),
                   ),
@@ -350,7 +350,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             const SizedBox(width: 3),
                             Text(
                               'Tor/I2p Hidden node',
-                              style: Theme.of(context).textTheme.body1,
+                              style: Theme.of(context).textTheme.bodyText1,
                             )
                           ],
                         )),

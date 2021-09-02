@@ -25,17 +25,18 @@ class Button extends StatelessWidget {
               width: personDelegateHeight,
               child: Center(
                 child: Icon(this.buttonIcon,
-                    color: Theme.of(context).textTheme.body2.color),
+                    color: Theme.of(context).textTheme.bodyText2.color),
               ),
             ),
             Expanded(
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 8),
+                padding:const  EdgeInsets.symmetric(horizontal: 8),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text(this.name, style: Theme.of(context).textTheme.body2),
+                    Text(this.name, style:
+                     Theme.of(context).textTheme.bodyText2),
                   ],
                 ),
               ),

@@ -83,16 +83,19 @@ class _FriendsLocationsScreenState extends State<FriendsLocationsScreen> {
                                       Text(
                                         'woof woof',
                                         style:
-                                            Theme.of(context).textTheme.body2,
+                                            Theme.of(context).
+                                            textTheme.bodyText2,
                                         textAlign: TextAlign.center,
                                       ),
                                       Padding(
                                         padding:
+                                           const 
                                             EdgeInsets.symmetric(vertical: 5),
                                         child: Text(
                                           'You can add friends in the menu',
                                           style:
-                                              Theme.of(context).textTheme.body1,
+                                              Theme.of(context).
+                                              textTheme.bodyText2,
                                           textAlign: TextAlign.center,
                                         ),
                                       ),

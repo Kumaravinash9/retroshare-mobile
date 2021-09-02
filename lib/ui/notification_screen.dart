@@ -49,7 +49,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                 Expanded(
                   child: Text(
                     'Notification',
-                    style: Theme.of(context).textTheme.body2,
+                    style: Theme.of(context).textTheme.bodyText2,
                   ),
                 ),
               ],
@@ -196,7 +196,8 @@ class _NotificationScreenState extends State<NotificationScreen> {
                                         // ignore: lines_longer_than_80_chars
                                         "Looks like there aren't any notification",
                                         style:
-                                            Theme.of(context).textTheme.body2,
+                                            Theme.of(context).
+                                            textTheme.bodyText1,
                                         textAlign: TextAlign.center,
                                       ),
                                     ),

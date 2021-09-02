@@ -565,7 +565,7 @@ class _CreateRoomScreenState extends State<CreateRoomScreen>
                                 padding: EdgeInsets.symmetric(horizontal: 8),
                                 child: Text(
                                   'Discover public chats',
-                                  style: Theme.of(context).textTheme.body2,
+                                  style: Theme.of(context).textTheme.bodyText1,
                                 ),
                               ),
                             ),
@@ -576,7 +576,8 @@ class _CreateRoomScreenState extends State<CreateRoomScreen>
                   );
                 },
               ),
-              // *********** Start of Create new room + friends signed list button ***********
+              // *********** Start of Create new room 
+              //+ friends signed list button ***********
               Expanded(
                 child: Stack(
                   children: <Widget>[
@@ -673,7 +674,8 @@ class _CreateRoomScreenState extends State<CreateRoomScreen>
                                       const EdgeInsets.symmetric(vertical: 5),
                                   child: Text(
                                     'Looks like an empty space',
-                                    style: Theme.of(context).textTheme.body2,
+                                    style: Theme.of(context)
+                                    .textTheme.bodyText1,
                                     textAlign: TextAlign.center,
                                   ),
                                 ),
@@ -682,7 +684,8 @@ class _CreateRoomScreenState extends State<CreateRoomScreen>
                                       const EdgeInsets.symmetric(vertical: 5),
                                   child: Text(
                                     'You can add friends in the menu',
-                                    style: Theme.of(context).textTheme.body1,
+                                    style: Theme.of(context).
+                                    textTheme.bodyText2,
                                     textAlign: TextAlign.center,
                                   ),
                                 ),

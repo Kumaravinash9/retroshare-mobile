@@ -42,14 +42,12 @@ dependencies:
     git:
       url: 'https://gitlab.com/Kumaravinash9/retroshare-dart-see/'
       ref: master
-  #  path: "../retroshare-dart-see"
 
   # https://github.com/Kumaravinash9/Retroshare-Wrapper
   retroshare_api_wrapper:
     git:
       url: 'https://github.com/Kumaravinash9/Retroshare-Wrapper.git'
       ref: master
-    #path: "../retroshare_api_wrapper"
 
 
   # Used to render chat messages

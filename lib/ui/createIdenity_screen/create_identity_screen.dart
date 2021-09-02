@@ -70,7 +70,7 @@ class _CreateIdentityScreenState extends State<CreateIdentityScreen>
                                 child: Text(
                                   'Signed Identity',
                                   overflow: TextOverflow.ellipsis,
-                                  style: Theme.of(context).textTheme.body2,
+                                  style: Theme.of(context).textTheme.bodyText1,
                                 ),
                               ),
                             ),
@@ -101,7 +101,7 @@ class _CreateIdentityScreenState extends State<CreateIdentityScreen>
                                 child: Text(
                                   ' Pseudo Identity',
                                   overflow: TextOverflow.ellipsis,
-                                  style: Theme.of(context).textTheme.body2,
+                                  style: Theme.of(context).textTheme.bodyText1,
                                 ),
                               ),
                             ),

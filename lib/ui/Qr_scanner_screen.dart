@@ -232,7 +232,7 @@ class _QRScannerState extends State<QRScanner>
                   const SizedBox(height: 20),
                   Text(
                     'QR Scanner',
-                    style: Theme.of(context).textTheme.body2,
+                    style: Theme.of(context).textTheme.bodyText2,
                   ),
                   const Spacer(),
                   PopupMenuButton(
@@ -343,10 +343,11 @@ class _QRScannerState extends State<QRScanner>
                     setState(() {
                       check = newval;
                     });
-                    if (check)
+                    if (check) {
                       tabController.animateTo(0);
-                    else
+                    } else {
                       tabController.animateTo(1);
+                    }
                   },
                 ),
               ),

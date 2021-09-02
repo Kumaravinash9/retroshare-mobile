@@ -138,7 +138,8 @@ class _MessagesTabState extends State<MessagesTab> {
                                       const EdgeInsets.symmetric(vertical: 25),
                                   child: Text(
                                       'It seems like there is no messages',
-                                      style: Theme.of(context).textTheme.body2),
+                                      style: Theme.of(context).textTheme
+                                      .bodyText1),
                                 ),
                               ],
                             ),
@@ -194,7 +195,7 @@ class _MessagesTabState extends State<MessagesTab> {
                         focusNode: _focusNode,
                         decoration: const InputDecoration(
                             border: InputBorder.none, hintText: 'Type text...'),
-                        style: Theme.of(context).textTheme.body2,
+                        style: Theme.of(context).textTheme.bodyText1,
                       ),
                     ),
                   ),

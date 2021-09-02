@@ -281,8 +281,8 @@ class _PersonDelegateState extends State<PersonDelegate>
                         child: Text(
                           widget.data.name,
                           style: widget.data.isMessage
-                              ? Theme.of(context).textTheme.body2
-                              : Theme.of(context).textTheme.body1,
+                              ? Theme.of(context).textTheme.bodyText1
+                              : Theme.of(context).textTheme.bodyText2,
                           overflow: TextOverflow.ellipsis,
                         ),
                       ),
@@ -302,7 +302,7 @@ class _PersonDelegateState extends State<PersonDelegate>
                           widget.data.message.isNotEmpty,
                       child: Text(
                         widget.data.message,
-                        style: Theme.of(context).textTheme.body1,
+                        style: Theme.of(context).textTheme.bodyText2,
                       ),
                     ),
                   ],
@@ -356,7 +356,7 @@ Future<void> showCustomMenu(String title, Icon icon, Function action,
         child: ListTile(
           contentPadding: const EdgeInsets.symmetric(horizontal: 8.0),
           leading: icon,
-          title: Text(title, style: Theme.of(context).textTheme.body2),
+          title: Text(title, style: Theme.of(context).textTheme.bodyText1),
         ),
       ),
     ],
