@@ -7,11 +7,13 @@ on:
     branches:
     - main
     - master
+    - gitaction
   push:
     branches:
     - master
     - develop
     - main
+    - gitaction
     
 # on: push    # Default will running for every branch.
     
