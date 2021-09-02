@@ -3,7 +3,6 @@ on:
   pull_request:
     branches:
       - master
-      - gitaction
 
 jobs:
   flutter_test:
@@ -13,19 +12,13 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-java@v1
         with:
-          java-version: '12.x'
+          java-version: "12.x"
       - uses: subosito/flutter-action@v1
         with:
-          flutter-version: '2.x'
-          channel: 'any'
-      - name: Dart version
-        run:  dart --version
-      - name: Flutter version
-        run: flutter --version
-      - name: Install app dependencies
-        run: flutter pub get
-      - name: flutter analyzer
-        run: flutter analyze
+          channel: "any"
+      - run: flutter pub get
+      - run: flutter analyze
+      - run: flutter test
 
   build_appbundle:
     name: Build Flutter (Android)
@@ -35,11 +28,10 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-java@v1
         with:
-          java-version: '12.x'
+          java-version: "12.x"
       - uses: subosito/flutter-action@v1
         with:
-          flutter-version: '2.x'
-          channel: 'any'
+          channel: "stable"
       - run: flutter pub get
       - run: flutter clean
       - run: flutter build appbundle
