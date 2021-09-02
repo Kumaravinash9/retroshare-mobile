@@ -131,11 +131,11 @@ class _FriendsTabState extends State<FriendsTab> {
                         delegate: SliverChildBuilderDelegate(
                           (BuildContext context, int index) {
                             final Identity actualId =
-                             friendsDistantAndIdsTuple.item3[
-                                    friendsDistantAndIdsTuple
-                                        .item2[index]?.interlocutorId] ??
-                                Identity(friendsDistantAndIdsTuple
-                                    .item2[index].interlocutorId);
+                                friendsDistantAndIdsTuple.item3[
+                                        friendsDistantAndIdsTuple
+                                            .item2[index]?.interlocutorId] ??
+                                    Identity(friendsDistantAndIdsTuple
+                                        .item2[index].interlocutorId);
                             return GestureDetector(
                               // Todo: DRY
                               child: PersonDelegate(
@@ -165,8 +165,8 @@ class _FriendsTabState extends State<FriendsTab> {
                               ),
                             );
                           },
-                          childCount: friendsDistantAndIdsTuple.item2.
-                          toSet().length,
+                          childCount:
+                              friendsDistantAndIdsTuple.item2.toSet().length,
                         ),
                       ),
                     ),

@@ -102,14 +102,12 @@ class PersonDelegateData {
 }
 
 class PersonDelegate extends StatefulWidget {
-    const PersonDelegate(
+  const PersonDelegate(
       {this.data, this.onPressed, this.onLongPress, this.isSelectable = false});
   final PersonDelegateData data;
   final Function onPressed;
   final Function onLongPress;
   final bool isSelectable;
-
-
 
   @override
   _PersonDelegateState createState() => _PersonDelegateState();
@@ -272,7 +270,7 @@ class _PersonDelegateState extends State<PersonDelegate>
             ),
             Expanded(
               child: Padding(
-                padding: const  EdgeInsets.symmetric(horizontal: 8),
+                padding: const EdgeInsets.symmetric(horizontal: 8),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
