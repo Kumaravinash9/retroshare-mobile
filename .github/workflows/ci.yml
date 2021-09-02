@@ -7,13 +7,11 @@ on:
     branches:
     - main
     - master
-    - gitaction
   push:
     branches:
     - master
     - develop
     - main
-    - gitaction
     
 # on: push    # Default will running for every branch.
     
@@ -35,9 +33,7 @@ jobs:
         flutter-version: '2.x'
         channel: 'any' # 'dev', 'alpha', default to: 'stable'
         # flutter-version: '1.12.x' # you can also specify exact version of flutter
-    # setup lint issue
-    - name: Lint Code Base
-      uses: github/super-linter@v4
+    
     # Get flutter dependencies.
     - run: flutter pub get
     
