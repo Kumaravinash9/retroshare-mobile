@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:provider/provider.dart';
+import 'package:retroshare/common/show_dialog.dart';
 import 'package:retroshare/provider/Idenity.dart';
 import 'package:retroshare/provider/auth.dart';
 import 'package:retroshare/common/styles.dart';
@@ -21,7 +22,7 @@ class SplashScreen extends StatefulWidget {
   String statusText;
 
   @override
-  _SplashState createState() => new _SplashState();
+  _SplashState createState() => _SplashState();
 }
 
 class _SplashState extends State<SplashScreen> {
@@ -49,26 +50,28 @@ class _SplashState extends State<SplashScreen> {
   }
 
   Future<void> checkBackendState(BuildContext context) async {
-    bool connectedToBackend = true;
-    bool isLoggedIn;
-    do {
+    bool isLoggedIn =false;
       try {
-        isLoggedIn = await RsLoginHelper.checkLoggedIn();
-        connectedToBackend = true;
-      } catch (e) {
-        if (connectedToBackend == true) _setStatusText("Can't connect...");
-        connectedToBackend = false;
+        await Future.delayed(const Duration(seconds: 2));
+        isLoggedIn = await isRetroshareRunning();
+      } catch (err) {
+        errorShowDialog('Something went wrong',
+         'Try to start  the app again', context);
       }
-    } while (!connectedToBackend);
+    
     // ignore: use_build_context_synchronously
     final auth = Provider.of<AccountCredentials>(context, listen: false);
+
+    // AuthToken Validation
     final bool isTokenValid = await auth.checkisvalidAuthToken();
+
     if (isLoggedIn && isTokenValid && auth.loggedinAccount != null) {
       _setStatusText('Logging in...');
-      // ignore: use_build_context_synchronously
+
+      //ignore: use_build_context_synchronously
       final ids = Provider.of<Identities>(context, listen: false);
       ids.fetchOwnidenities().then((value) {
-        if (ids.ownIdentity != null && ids.ownIdentity.length == 0) {
+        if (ids.ownIdentity != null && ids.ownIdentity.isEmpty) {
           Navigator.pushReplacementNamed(context, '/create_identity',
               arguments: true);
         } else {
