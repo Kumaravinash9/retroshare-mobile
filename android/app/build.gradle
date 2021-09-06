@@ -82,7 +82,8 @@ apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
+	buildToolsVersion '23.0.0 rc3'
 
     copy {
 		rsProp.getRequiredProperty('retroshare.servicepackages').split(':').each {
@@ -114,12 +115,12 @@ android {
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "cc.retroshare.retroshare"
-        minSdkVersion 16
-        targetSdkVersion 28
+        minSdkVersion 21
+        targetSdkVersion 29
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        multiDexEnabled true
+        //multiDexEnabled true
     }
 
     buildTypes {
@@ -138,12 +139,13 @@ flutter {
 }
 
 dependencies {
+	implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.android.support:appcompat-v7:28.0.0' 
     implementation "androidx.lifecycle:lifecycle-extensions:2.0.0"
     androidTestImplementation 'androidx.test:runner:1.1.1'
-    implementation 'androidx.multidex:multidex: 2.0.1'
+    //implementation 'androidx.multidex:multidex: 2.0.1'
     implementation fileTree(dir: qtAndroidDir +'/jar/', include: ['*.jar'])
 }

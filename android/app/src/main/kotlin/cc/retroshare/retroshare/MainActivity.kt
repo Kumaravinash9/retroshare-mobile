@@ -22,7 +22,7 @@ class MainActivity : FlutterActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
       super.onCreate(savedInstanceState)
 
-      GeneratedPluginRegistrant.registerWith(this)
+     // GeneratedPluginRegistrant.registerWith(this)
       MethodChannel(flutterView, CHANNEL_NAME).setMethodCallHandler { call, result ->
         // Note: this method is invoked on the main thread.
         handleMethodCall(call, result)
